@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RUMAH - Ruang Suara Mahasiswa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800&display=swap" rel="stylesheet" />
+    <style>
+      @font-face {
+        font-family: "College";
+        src: url("Font/font.ttf") format("truetype");
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: "Rubik", sans-serif;
+        background: linear-gradient(135deg, #0f3d3e, #1c5758);
+        color: #fff;
+        text-align: center;
+        padding: 2rem 1rem;
+        animation: fadeIn 1s ease-in;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 2rem;
+        gap: 1rem;
+      }
+      header img {
+        height: 60px;
+        margin: 0.5rem;
+      }
+      h1 {
+        font-family: "College", "Rubik", sans-serif;
+        font-size: 3rem;
+        font-weight: 800;
+        letter-spacing: 2px;
+        margin: 1rem 0 0.5rem;
+        animation: fadeInDown 1s ease-out;
+      }
+      h2 {
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+        animation: fadeInDown 1.2s ease-out;
+      }
+      p.description {
+        max-width: 600px;
+        margin: 0 auto 2rem;
+        font-size: 1rem;
+        color: #d1d5db;
+        animation: fadeIn 1.5s ease-out;
+      }
+      .button-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+      }
+      .menu-button {
+        background: linear-gradient(45deg, #ffffff, #e6f2f2);
+        color: #0f3d3e;
+        padding: 1rem 2.2rem;
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 1.1rem;
+        text-decoration: none;
+        transition: all 0.4s ease;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+        transform: scale(1);
+        position: relative;
+        overflow: hidden;
+      }
+      .menu-button::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.2);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.5s ease;
+        z-index: 0;
+      }
+      .menu-button:hover::before {
+        transform: scaleX(1);
+      }
+      .menu-button:hover {
+        transform: scale(1.08);
+      }
+      .menu-button:active {
+        transform: scale(0.95);
+      }
+      .menu-button span {
+        position: relative;
+        z-index: 1;
+      }
+
+      .footer {
+        background-color: #0b2c2c;
+        padding: 2rem 1rem;
+        border-top: 2px solid rgba(255, 255, 255, 0.1);
+        color: #d1d5db;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        text-align: left;
+        gap: 2rem;
+      }
+      .footer-column {
+        flex: 1;
+        min-width: 250px;
+      }
+      .footer h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        color: #fff;
+      }
+      .footer p {
+        margin: 0.3rem 0;
+      }
+      .footer a {
+        color: #d1d5db;
+        text-decoration: none;
+      }
+      .footer a:hover {
+        text-decoration: underline;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 2.2rem;
+        }
+        h2 {
+          font-size: 1.25rem;
+        }
+        .menu-button {
+          width: 100%;
+          max-width: 300px;
+        }
+        header {
+          flex-direction: column;
+          align-items: center;
+        }
+        .footer {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div>
+        <img src="UII.png" alt="Logo UII" />
+        <img src="LEM.png" alt="LEM" />
+        <img src="kabinet.png" alt="Kabinet" />
+      </div>
+    </header>
+
+    <h1>RUMAH</h1>
+    <h2>Ruang Suara Mahasiswa</h2>
+    <p class="description">Kami menyediakan wadah bagi mahasiswa untuk penyaluran laporan terkait aspirasi mahasiswa, tindak kekerasan, dan pengaduan KKN</p>
+
+    <div class="button-container">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdAwcaoeVNAd-IAil2AT-i4BkCC6bq9U_m0ZU-_qNgGf7_xeg/viewform?usp=dialog" class="menu-button" target="_blank"><span>Pengaduan KKN</span></a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfcaYcl6yy9Iaiypa4x7olFLdLUjqmCalWFM_hMWZC4lt4Sxg/viewform?usp=dialog" class="menu-button" target="_blank"><span>Tindak Kekerasan</span></a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSeVOXqFkM4YTyXapLKcVZS6gdgFv8vpLiq7VXdb8_41Sj8qJQ/viewform?usp=dialog" class="menu-button" target="_blank"><span>Aspirasi Mahasiswa</span></a>
+    </div>
+
+    <div class="footer">
+      <div class="footer-column">
+        <h3>Kontak Pengaduan</h3>
+        <p>Apabila terdapat kendala dalam pengisian form dapat melaporkan ke kontak berikut:</p>
+        <p>📞 +62 895-3430-19301 (Ahadian)</p>
+        <p>📞 +62 858-4528-7372 (Nita)</p>
+      </div>
+      <div class="footer-column">
+        <h3>Sosial Media</h3>
+        <p>
+          Instagram: <a href="https://www.instagram.com/lem_fmipauii?igsh=Nml3am5oZWVoaDVp" target="_blank"><strong>@lem_fmipauii</strong></a>
+        </p>
+        <p>
+          YouTube: <a href="https://youtube.com/@officiallemfmipauii2653?si=y7aqU2AtePk4tAU1" target="_blank"><strong>Official LEM FMIPA UII</strong></a>
+        </p>
+        <p>
+          TikTok: <a href="https://www.tiktok.com/@lemfmipauii?_t=ZS-8xPUWSXF7WD&_r=1" target="_blank"><strong>@lemfmipauii</strong></a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
